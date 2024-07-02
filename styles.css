@@ -1,0 +1,57 @@
+/* Given stylings */
+:root {
+    /* colors */
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-dkBlue: hsl(234, 12%, 34%);
+    --clr-grayishBlue: hsl(229, 6%, 66%);
+    --clr-ltGray: hsl(0, 0%, 98%);
+
+    /* font weights */
+    --fw-light: 200;
+    --fw-med: 400;
+    --fw-bold: 600;
+
+    /* fonts */
+    --font-poppins: "Poppins", sans-serif;
+}
+
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-size: 15px;
+    font-family: var(--font-poppins);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/* non-mobile settings */
+  @media (min-width: 673px) {
+
+  }
