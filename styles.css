@@ -1,23 +1,22 @@
 /* Given stylings */
 :root {
-    /* colors */
-    --clr-red: hsl(0, 78%, 62%);
-    --clr-cyan: hsl(180, 62%, 55%);
-    --clr-orange: hsl(34, 97%, 64%);
-    --clr-blue: hsl(212, 86%, 64%);
-    --clr-dkBlue: hsl(234, 12%, 34%);
-    --clr-grayishBlue: hsl(229, 6%, 66%);
-    --clr-ltGray: hsl(0, 0%, 98%);
+  /* colors */
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-dkBlue: hsl(234, 12%, 34%);
+  --clr-grayishBlue: hsl(229, 6%, 66%);
+  --clr-ltGray: hsl(0, 0%, 98%);
 
-    /* font weights */
-    --fw-light: 200;
-    --fw-med: 400;
-    --fw-bold: 600;
+  /* font weights */
+  --fw-light: 200;
+  --fw-med: 400;
+  --fw-bold: 600;
 
-    /* fonts */
-    --font-poppins: "Poppins", sans-serif;
+  /* fonts */
+  --font-poppins: "Poppins", sans-serif;
 }
-
 
 /* CSS reset */
 *,
@@ -30,95 +29,125 @@
   padding: 0;
 }
 
-body{
-    font-size: 15px;
-    font-family: var(--font-poppins);
+body {
+  font-size: 15px;
+  font-family: var(--font-poppins);
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 10rem 0rem;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10rem 0rem;
 }
 
-p{
+p {
   color: var(--clr-grayishBlue);
 }
 
-h2{
+h2 {
   font-weight: var(--fw-bold);
 }
 
-img{
+img {
   align-self: flex-end;
   padding: 3rem 0rem 0rem 0rem;
 }
 
-.container{
+.container {
   width: 80%;
   max-width: 400px;
   min-width: 350px;
   padding: 1.5rem;
 }
 
-.headers{
+.headers {
   margin-bottom: 1rem;
 }
 
-.headers h2{
+.headers h2 {
   font-size: 1.5rem;
 }
 
-.textContainer{
+.textContainer {
   margin-bottom: 5rem;
   text-align: center;
 }
 
-.textContainer p{
+.textContainer p {
   font-size: 1.1rem;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 2rem;
   padding: 2rem;
 }
 
-.headerRegular{
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.headerRegular {
   font-weight: var(--fw-light);
 }
 
-.supervisorContainer{
-  border-top: var(--clr-cyan) solid .5rem;
+.supervisorContainer {
+  border-top: var(--clr-cyan) solid 0.5rem;
 }
 
-.teamBuilderContainer{
-  border-top: var(--clr-red) solid .5rem;
+.teamBuilderContainer {
+  border-top: var(--clr-red) solid 0.5rem;
 }
 
-.karmaContainer{
-  border-top: var(--clr-orange) solid .5rem;
+.karmaContainer {
+  border-top: var(--clr-orange) solid 0.5rem;
 }
 
-.calculatorContainer{
-  border-top: var(--clr-blue) solid .5rem;
+.calculatorContainer {
+  border-top: var(--clr-blue) solid 0.5rem;
 }
 
 /* pre-included attribution css moved from index <style> */
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 /* non-mobile settings */
-  @media (min-width: 673px) {
-
+@media (min-width: 1000px) {
+  main {
+    padding: 0;
   }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .headers {
+    margin-bottom: 2rem;
+  }
+
+  .headers h2 {
+    font-size: 2rem;
+  }
+
+  .textContainer p {
+    max-width: 55%;
+    margin: auto;
+  }
+}
